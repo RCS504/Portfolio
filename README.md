@@ -2,8 +2,6 @@
 
 My personal portfolio website, built with HTML, CSS, and JavaScript.
 
-Live site: [huzaifaamir.github.io/portfolio](https://RCS504.github.io/REPO-NAME) (replace REPO-NAME with your actual repo name once deployed)
-
 ## About
 
 A single-page portfolio showcasing who I am, my projects, and how to get in touch. Built by Huzaifa Amir, a BSc Computer Science student at Queen's University Belfast.
