@@ -39,6 +39,95 @@
                 time training in Taijutsu, which helped build discipline, focus, and resilience, qualities that
                 continue to shape how I approach my academic work.</p>
         </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <label for="project">Choose project</label>
+            <select name="project" id="project">
+                <option value="" disabled selected hidden>Choose project</option>
+                <option value="food-aid-distribution-system">Food Aid Distribution System</option>
+                <option value="airline-booking-system">Airline Booking System</option>
+            </select>
+            <div id="food-aid-distribution-system">
+                <!--Intro to Food Aid Distribution Project-->
+                <h3>Food Aid Distribution System</h3>
+                <p>A food aid distribution system designed for a university group project</p>
+                <p>Built with a team of four, modelled on how the World Food Programme tracks aid into food-insecure
+                    regions. I designed the relational MySQL schema across six linked tables, with foreign-key
+                    constraints and validation checks, then built the PHP backend and the Chart.js reporting layer on
+                    top.</p>
+                <!--Image Carousel-->
+                <div id="carousel-container">
+                    <figure class="img-container">
+                        <img src="images/home-page.png" alt="home page" width="900" height="450">
+                        <figcaption>Landing page redirecting to the six main pages: Regions, Organisations, Food Items,
+                            Distribution Centres, Distribution Events, and Reports.</figcaption>
+                    </figure>
+                    <figure class="img-container">
+                        <img src="images/distribution-event-page.png" alt="distribution event page" width="900"
+                            height="450">
+                        <figcaption>Distribution Events table, joining a distribution centre and an organisation on a
+                            date with a status. Both foreign keys resolve to names in one query, filterable by status
+                            and date range.</figcaption>
+                    </figure>
+                    <figure class="img-container">
+                        <img src="images/base-report.png" alt="base report" width="900" height="450">
+                        <img src="images/filtered-report.png" alt="filtered report" width="900" height="450">
+                        <figcaption>Same Report, with and without a date filter (1 January to 30 April 2025). The total
+                            drops and the rankings shift: Somalia falls from 6870 to 3620 and Yemen from 5512 to 2582
+                            because the filter re-runs the query against the database rather than just hiding rows on
+                            screen.</figcaption>
+                    </figure>
+                    <figure class="img-container">
+                        <img src="images/manage-region-advance-filter.png" alt="manage region advance filter"
+                            width="900" height="450">
+                        <figcaption>Regions filtered with 2 constraints at once, minimum population of 20 million and
+                            minimum vulnerability index of 80. Only 5 regions are left.</figcaption>
+                    </figure>
+                    <figure class="img-container">
+                        <img src="images/empty-validation.png" alt="empty validation output" width="900" height="450">
+                        <figcaption>The Add New Event form, submitted empty. Validation check comes in for the required
+                            fields and marks them while also providing a reason which is collected into one summary
+                            rather than failing on just the first error.</figcaption>
+                    </figure>
+                    <figure class="img-container">
+                        <img src="images/network-tab.png" alt="network tab" width="900" height="450">
+                        <figcaption>A network tab during a report load. DevTools open on the request to dbConnector.php.
+                            The JSON response proves that the rendered data is not hard-coded into the tables.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="airline-booking-system">
+                <!--Intro to Airline Booking System-->
+                <h3>Airline Booking System</h3>
+                <p>A console based flight booking system built solo in Java, spanning 13 files across the model,
+                    system and user interface packages, that were developed over 27 Git commits.</p>
+                <p>This project uses a HashMap-based booking engine supporting 12 different operations, including
+                    flight search, seat booking guarded against double-booking, and cancellation guarded against
+                    double-cancellation. Booking references are generated as unique 6-character codes with collision
+                    detection, and all user inputs are guarded with validation.</p>
+                <p>Try it below! This is the actual program running live, not a recording. Start with option 1 to view
+                    the available routes, then use a flight number like BA101 to search flights, view the seat map, or
+                    book a seat.</p>
+                <!--Airline Booking System Demo-->
+                <iframe id="airline-demo" src="https://airline-booking-deploy.onrender.com" width="600"
+                    height="400"></iframe>
+                <button id="reload" aria-label="Reload demo">&#8635;</button>
+                <h4>Here is some test data to help you test the system out:</h4>
+                <p>Airports: LHR, JFK, DXB, CDG, SIN</p>
+                <p>Flights: BA101 (LHR→JFK), BA102 (JFK→LHR), EK201 (LHR→DXB), AF305 (CDG→SIN), BA103 (LHR→JFK)</p>
+                <p>Seats follow a row + letter format, e.g. 1A for business, 4B for economy (on BA101/BA102)</p>
+                <h5>Per-Feature Examples:</h5>
+                <ul>
+                    <li>Search Flights -- LHR to JFK, 2026-03-20</li>
+                    <li>View Seat Map -- flight BA101</li>
+                    <li>Book Seat -- flight BA101, seat 1A</li>
+                    <li>View All Bookings -- flight BA101</li>
+                    <li>Lookup/Cancel Booking -- use the reference shown after booking a seat</li>
+                    <li>Add Flight -- new flight number, LHR to JFK, Boeing-737, 2026-04-01T10:00</li>
+                </ul>
+            </div>
+        </section>
     </main>
     <footer>
         <!--Contact Section-->
