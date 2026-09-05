@@ -10,9 +10,9 @@ A single-page portfolio showcasing who I am, my projects, and how to get in touc
 
 - Header: name, tagline, navigation
 - About: brief background
-- Projects: Airline Booking System (Java) — a working, interactive console app embedded live via a Docker-deployed terminal — and Food Aid Distribution System (HTML, CSS, JavaScript, PHP, MySQL). JavaScript toggles between them.
+- Projects: Airline Booking System (Java) — a working, interactive console app embedded live via a Docker-deployed terminal, with a reload button to restart the session and Food Aid Distribution System (HTML, CSS, JavaScript, PHP, MySQL), shown through a scroll-snap image carousel. A dropdown toggles between the two.
 - Skills: technologies I work with
-- Contact: how to reach me, plus a CV download
+- Contact: how to reach me, plus buttons to view or download my CV
 
 ## Built with
 

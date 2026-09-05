@@ -73,10 +73,26 @@ main {
     text-align: left;
 }
 
-#cv-download {
+#cv-open {
     padding: 10px;
     background-color: #2D333B;
     color: #E6EDF3;
+}
+
+#cv-open:hover {
+    background-color: #161B22;
+    color: #A371F7;
+}
+
+#cv-download {
+    background-color: #2D333B;
+    color: #E6EDF3;
+    border-top: 2px solid #a8a8a8;
+    border-left: 2px solid #a8a8a8;
+    border-right: 2px solid #545454;
+    border-bottom: 2px solid #545454;
+    padding: 7px 8px 9px 8px;
+    font-family:Calibri, sans-serif;
 }
 
 #cv-download:hover {
