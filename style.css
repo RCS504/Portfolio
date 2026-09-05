@@ -1,0 +1,227 @@
+body {
+    background-color: #2D333B;
+    color: #E6EDF3;
+}
+
+header {
+    background-color: #161B22;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    border: 1px solid #30363D;
+    border-bottom: 0px;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+    font-size: 45px;
+    padding-bottom: 0%;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+header>p {
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+    word-spacing: 40px;
+    padding: 10px;
+    background-color: #21262D;
+    font-size: 30px;
+    border-top: 2px solid #30363D;
+}
+
+a {
+    color: #A371F7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E6EDF3;
+}
+
+main {
+    background-color: #0D1117;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    border: 1px solid #30363D;
+}
+
+#about {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#about>p {
+    text-align: left;
+}
+
+#cv-download {
+    padding: 10px;
+    background-color: #2D333B;
+    color: #E6EDF3;
+}
+
+#cv-download:hover {
+    background-color: #161B22;
+    color: #A371F7;
+}
+
+#project {
+    padding: 10px;
+    background-color: #2D333B;
+    color: #E6EDF3;
+    text-align: center;
+}
+
+#projects {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+
+#reload-iframe {
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reload {
+    padding: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+    background-color: #2D333B;
+    color: #E6EDF3;
+    text-align: center;
+    position: absolute;
+    top: 3px;
+    right: 18px;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+#reload:hover {
+    background-color: #161B22;
+    color: #A371F7;
+}
+
+#food-aid-distribution-system>p {
+    text-align: left;
+
+}
+
+#carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    gap: 30px;
+    scrollbar-color: #161B22 #2D333B;
+}
+
+#carousel-container::-webkit-scrollbar-thumb {
+    background-color: #161B22;
+}
+
+#carousel-container::-webkit-scrollbar-track {
+    background-color: #2D333B;
+}
+
+.img-container {
+    padding-top: 2%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    margin: 0;
+    width: 80%;
+    border: 3px solid #2D333B;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.featured-pair {
+    padding-top: 2%;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    scroll-snap-align: center;
+    margin: 0;
+    width: 80%;
+    border: 3px solid #2D333B;
+    display: flex;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.featured-pair img {
+    border: 3px solid #2D333B;
+    max-width: 49%;
+    height: auto;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+#airline-booking-system>p {
+    text-align: left;
+
+}
+
+p>strong {
+    font-size: 20px;
+    color: #E6EDF3;
+}
+
+ul {
+    text-align: left;
+}
+
+#skills {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+
+#skills>p {
+    text-align: left;
+}
+
+footer {
+    background-color: #161B22;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    border: 1px solid #30363D;
+}

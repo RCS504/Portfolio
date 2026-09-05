@@ -13,17 +13,19 @@
     <header>
         <!--Basic introduction-->
         <h1>Huzaifa Amir</h1>
-        <p>Hi I'm Huzaifa and this is my Portfolio</p>
+        <p>Hi I'm Huzaifa and this is my Portfolio!</p>
         <!--Set of navigation links-->
         <nav>
             <a href="#about">About</a>
+            <span aria-hidden="true">|</span>
             <a href="#projects">Projects</a>
+            <span aria-hidden="true">|</span>
             <a href="#skills">Skills</a>
+            <span aria-hidden="true">|</span>
             <a href="#contact">Contact</a>
         </nav>
     </header>
     <main>
-        <hr>
         <!--About section-->
         <section id="about">
             <h2>About</h2>
@@ -41,11 +43,9 @@
                 continue to shape how I approach my academic work.</p>
             <button id="cv-download">Download CV</button>
         </section>
-        <hr>
         <!--Project Section-->
         <section id="projects">
             <h2>Projects</h2>
-            <label for="project">Choose project</label>
             <select name="project" id="project">
                 <option value="" disabled selected hidden>Choose project</option>
                 <option value="food-aid-distribution-system">Food Aid Distribution System</option>
@@ -57,45 +57,55 @@
                 <p>A food aid distribution system designed for a university group project</p>
                 <p>Built with a team of four, modelled on how the World Food Programme tracks aid into food-insecure
                     regions. I designed the relational MySQL schema across six linked tables, with foreign-key
-                    constraints and validation checks, then built the PHP backend and the Chart.js reporting layer on
+                    constraints and validation checks, then built the PHP backend and the Chart.js reporting layer
+                    on
                     top.</p>
                 <!--Image Carousel-->
                 <div id="carousel-container">
                     <figure class="img-container">
                         <img src="images/home-page.png" alt="home page" width="900" height="450">
-                        <figcaption>Landing page redirecting to the six main pages: Regions, Organisations, Food Items,
+                        <figcaption>Landing page redirecting to the six main pages: Regions, Organisations, Food
+                            Items,
                             Distribution Centres, Distribution Events, and Reports.</figcaption>
                     </figure>
                     <figure class="img-container">
                         <img src="images/distribution-event-page.png" alt="distribution event page" width="900"
                             height="450">
-                        <figcaption>Distribution Events table, joining a distribution centre and an organisation on a
-                            date with a status. Both foreign keys resolve to names in one query, filterable by status
+                        <figcaption>Distribution Events table, joining a distribution centre and an organisation on
+                            a
+                            date with a status. Both foreign keys resolve to names in one query, filterable by
+                            status
                             and date range.</figcaption>
                     </figure>
-                    <figure class="img-container">
-                        <img src="images/base-report.png" alt="base report" width="900" height="450">
-                        <img src="images/filtered-report.png" alt="filtered report" width="900" height="450">
-                        <figcaption>Same Report, with and without a date filter (1 January to 30 April 2025). The total
-                            drops and the rankings shift: Somalia falls from 6870 to 3620 and Yemen from 5512 to 2582
-                            because the filter re-runs the query against the database rather than just hiding rows on
+                    <figure class="featured-pair">
+                        <img src="images/base-report.png" alt="base report" width="450" height="225">
+                        <img src="images/filtered-report.png" alt="filtered report" width="450" height="225">
+                        <figcaption>Same Report, with and without a date filter (1 January to 30 April 2025). The
+                            total
+                            drops and the rankings shift: Somalia falls from 6870 to 3620 and Yemen from 5512 to
+                            2582
+                            because the filter re-runs the query against the database rather than just hiding rows
+                            on
                             screen.</figcaption>
                     </figure>
                     <figure class="img-container">
                         <img src="images/manage-region-advance-filter.png" alt="manage region advance filter"
                             width="900" height="450">
-                        <figcaption>Regions filtered with 2 constraints at once, minimum population of 20 million and
+                        <figcaption>Regions filtered with 2 constraints at once, minimum population of 20 million
+                            and
                             minimum vulnerability index of 80. Only 5 regions are left.</figcaption>
                     </figure>
                     <figure class="img-container">
                         <img src="images/empty-validation.png" alt="empty validation output" width="900" height="450">
-                        <figcaption>The Add New Event form, submitted empty. Validation check comes in for the required
+                        <figcaption>The Add New Event form, submitted empty. Validation check comes in for the
+                            required
                             fields and marks them while also providing a reason which is collected into one summary
                             rather than failing on just the first error.</figcaption>
                     </figure>
                     <figure class="img-container">
                         <img src="images/network-tab.png" alt="network tab" width="900" height="450">
-                        <figcaption>A network tab during a report load. DevTools open on the request to dbConnector.php.
+                        <figcaption>A network tab during a report load. DevTools open on the request to
+                            dbConnector.php.
                             The JSON response proves that the rendered data is not hard-coded into the tables.
                         </figcaption>
                     </figure>
@@ -114,12 +124,15 @@
                     the available routes, then use a flight number like BA101 to search flights, view the seat map, or
                     book a seat.</p>
                 <!--Airline Booking System Demo-->
-                <iframe id="airline-demo" src="https://airline-booking-deploy.onrender.com" width="600"
-                    height="400"></iframe>
-                <button id="reload" aria-label="Reload demo">&#8635;</button>
+                <div id="reload-iframe">
+                    <iframe id="airline-demo" src="https://airline-booking-deploy.onrender.com" width="600"
+                        height="400"></iframe>
+                    <button id="reload" aria-label="Reload demo">&#8635;</button>
+                </div>
                 <h4>Here is some test data to help you test the system out:</h4>
-                <p>Airports: LHR, JFK, DXB, CDG, SIN</p>
-                <p>Flights: BA101 (LHR→JFK), BA102 (JFK→LHR), EK201 (LHR→DXB), AF305 (CDG→SIN), BA103 (LHR→JFK)</p>
+                <p><strong>Airports:</strong> LHR, JFK, DXB, CDG, SIN</p>
+                <p><strong>Flights:</strong> BA101 (LHR→JFK), BA102 (JFK→LHR), EK201 (LHR→DXB), AF305 (CDG→SIN), BA103
+                    (LHR→JFK)</p>
                 <p>Seats follow a row + letter format, e.g. 1A for business, 4B for economy (on BA101/BA102)</p>
                 <h5>Per-Feature Examples:</h5>
                 <ul>
@@ -132,19 +145,18 @@
                 </ul>
             </div>
         </section>
-        <hr>
         <!--Skill Section-->
         <section id="skills">
             <h2>Skills</h2>
             <p><strong>Languages:</strong> Java, Python, SQL, JavaScript, PHP, HTML, CSS</p>
             <p><strong>Concepts:</strong> Object-Oriented Programming, Data Structures and Algorithms, Relational
                 Database Design, Introduction to Cyber Security</p>
-            <p><strong>Tools/Platforms:</strong> Git, GitHub, MySQL, Visual Studeio Code, Eclipse</p>
-            <p><strong>Certifications:</strong> Python for Everybody Specialisation, University of Michigan via Coursera
+            <p><strong>Tools/Platforms:</strong> Git, GitHub, MySQL, Visual Studio Code, Eclipse</p>
+            <p><strong>Certifications:</strong> Python for Everybody Specialisation, University of Michigan via
+                Coursera
                 (5 courses)</p>
         </section>
     </main>
-    <hr>
     <footer>
         <!--Contact Section-->
         <section id="contact">
@@ -154,13 +166,13 @@
                         stroke-linejoin="round">
                         <path
                             d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                    </svg></a>Phone Number: <a href="tel:+447900362383">+44 7900 362383</a></p>
+                    </svg></a> Phone Number: <a href="tel:+447900362383">+44 7900 362383</a></p>
             <p><a href="mailto:huzaifawha@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                         <polyline points="22,6 12,13 2,6" />
-                    </svg></a>Email: <a href="mailto:huzaifawha@gmail.com">huzaifawha@gmail.com</a></p>
+                    </svg></a> Email: <a href="mailto:huzaifawha@gmail.com">huzaifawha@gmail.com</a></p>
             <p><a href="https://www.linkedin.com/in/huzaifa-amir-rasheed/" target="_blank"
                     rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
